@@ -111,7 +111,7 @@ bot.on("ready", async member => {
         let statut = ["WATCHING"];
         let rndmStatut = statut[Math.floor(Math.random() * statut.length)];
 
-        let statuttext = ['SouthMT', '!help', 'play.SouthMT.nl'];
+        let statuttext = ['TwinTopia', '!help', 'IP --> SOON'];
         const randomText = statuttext[Math.floor(Math.random() * statuttext.length)];
         bot.user.setActivity(randomText, { type: rndmStatut });
     }, 20000)
@@ -169,7 +169,7 @@ bot.on("message", async message => {
                 .setDescription("Reageer om een ticket te openen!\n\n:clipboard: | Sollicitatie\n:moneybag: | Aankopen\n:question: | Vragen\n:pray: | Partners\n:paperclip: | Overig")
                 .setFooter(botConfig.footer + " • Ticket Openen")
             message.channel.send(embedMessage).then(message => {
-                message.react("??")
+                message.react(":tickets:")
                 message.react("??")
                 message.react("?")
                 message.react("??")
