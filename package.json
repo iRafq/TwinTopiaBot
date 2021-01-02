@@ -1,0 +1,36 @@
+{
+  "name": "burnmt",
+  "version": "1.0.1",
+  "description": "node index.js",
+  "main": "index.js",
+  "dependencies": {
+    "@discordjs/opus": "0.3.2",
+    "async": "^3.2.0",
+    "axios": "^0.19.2",
+    "canvas": "^2.6.1",
+    "constants": "0.0.2",
+    "discord-emoji": "^1.1.1",
+    "discord-giveaways": "^3.2.3",
+    "discord-youtube-api": "^0.1.0",
+    "discord.js": "^12.2.0",
+    "fivem": "^2.1.2",
+    "minecraft-server-util": "^1.1.1",
+    "miss": "0.0.1",
+    "ms": "^2.1.2",
+    "mysql": "github:mysqljs/mysql",
+    "node-superfetch": "^0.1.10",
+    "node-uptime-robot": "^1.0.0",
+    "random-puppy": "^1.1.0",
+    "simple-youtube-api": "5.2.1",
+    "tcp-ping": "^0.1.1",
+    "ytdl-core": "^2.1.2",
+    "ytdl-core-discord": "1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BamiSchijf",
+  "license": "ISC"
+}

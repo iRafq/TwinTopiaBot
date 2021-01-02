@@ -1,0 +1,15 @@
+const discord = require("discord.js");
+
+module.exports.run = async (bot, message, args, ops) => {
+    if (!args[1]) return message.channel.send("Misschein moet je een __**vraag**__ stellen?? 😆 ");
+    var antwoorden = ["**Antwoord:** Zeker!", "**Antwoord:** Nee, sorry.", "**Antwoord:** Ik heb geen idee! 😆", "**Antwoord:**  Ik ben nog niet zo slim....", "Mijn bronnen zeggen van niet!", "Ik heb geen idee ;("];
+    var resultaat = Math.floor((Math.random() * antwoorden.length));
+
+    message.channel.send(antwoorden[resultaat]);
+
+}
+
+module.exports.help = {
+    name: "8ball",
+    description: "Stel een vraag aan de bot."
+}
