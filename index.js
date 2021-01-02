@@ -148,15 +148,15 @@ bot.on("message", async message => {
         var embedMessage = new Discord.MessageEmbed()
             .setColor(botConfig.color)
             .setTitle(":information_source: | Command Help")
-            .setDescription("Wij hebben de commands opgedeeld in categorieën:\n\n:paperclip: | Basic Commands\n:tickets: | Tickets\n:mag_right: | Moderatie\n:lock_with_ink_pen: | Staff Tickets\n:closed_lock_with_key: | Staff Commands\n:bulb: | Info commands")
+            .setDescription("Wij hebben de commands opgedeeld in categorieën:\n\n:paperclip: | Basic Commands\n:tickets: | Tickets\n::tickets: | Moderatie\n:lock_with_ink_pen: | Staff Tickets\n:closed_lock_with_key: | Staff Commands\n:bulb: | Info commands")
             .setFooter("Voor " + message.author.tag + ". • Command Help", avatar)
         sentMessage = await message.channel.send(embedMessage)
-        sentMessage.react("??")
-        sentMessage.react("???")
-        sentMessage.react("??")
-        sentMessage.react("??")
-        sentMessage.react("??")
-        sentMessage.react("??")
+        sentMessage.react(":paperclip:")
+        sentMessage.react(":tickets:")
+        sentMessage.react(":tickets:")
+        sentMessage.react(":lock_with_ink_pen:")
+        sentMessage.react(":closed_lock_with_key:")
+        sentMessage.react(":bulb:")
     }
     // !reactionticket
     if (message.content.toLowerCase().startsWith("!reactionticket")) {
@@ -169,11 +169,12 @@ bot.on("message", async message => {
                 .setDescription("Reageer om een ticket te openen!\n\n:clipboard: | Sollicitatie\n:moneybag: | Aankopen\n:question: | Vragen\n:pray: | Partners\n:paperclip: | Overig")
                 .setFooter(botConfig.footer + " • Ticket Openen")
             message.channel.send(embedMessage).then(message => {
-                message.react(":tickets:")
-                message.react("??")
-                message.react("?")
-                message.react("??")
-                message.react("??")
+                sentMessage.react(":paperclip:")
+                sentMessage.react(":tickets:")
+                sentMessage.react(":tickets:")
+                sentMessage.react(":lock_with_ink_pen:")
+                sentMessage.react(":closed_lock_with_key:")
+                sentMessage.react(":bulb:")
             })
         }
     }
